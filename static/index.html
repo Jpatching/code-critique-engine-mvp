@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Critique Engine</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Code Critique Engine</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="/dashboard" data-route>Dashboard</a>
+                <a href="/analyze" data-route>Analyze</a>
+                <span class="user-info" id="userInfo"></span>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main id="app">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/router.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

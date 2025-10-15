@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start PocketBase",
+            "type": "shell",
+            "command": "./pocketbase serve",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "instanceLimit": 1
+            }
+        },
+        {
+            "label": "Start Flask Server",
+            "type": "shell",
+            "command": "./start_server.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "isBackground": true,
+            "dependsOn": [
+                "Check PocketBase Running"
+            ],
+            "runOptions": {
+                "instanceLimit": 1
+            }
+        },
+        {
+            "label": "Check PocketBase Running",
+            "type": "shell",
+            "command": "pgrep -f './pocketbase serve' || echo '⚠️  Start PocketBase first!'",
+            "problemMatcher": []
+        },
+        {
+            "label": "Stop All Servers",
+            "type": "shell",
+            "command": "pkill -f 'pocketbase serve'; pkill -f 'server.py'; echo '✅ All servers stopped'",
+            "problemMatcher": []
+        },
+        {
+            "label": "View Server Logs",
+            "type": "shell",
+            "command": "tail -f server.log",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "isBackground": true
+        },
+        {
+            "label": "Run Auth Tests",
+            "type": "shell",
+            "command": "./verify_auth.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Run Week 3-4 Tests",
+            "type": "shell",
+            "command": "./verify_week3_4.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Install Python Dependencies",
+            "type": "shell",
+            "command": "source .venv/bin/activate && pip install -r requirements.txt",
+            "problemMatcher": []
+        }
+    ]
+}

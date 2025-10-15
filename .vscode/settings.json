@@ -1,0 +1,71 @@
+{
+    // GitHub Copilot Settings
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "github.copilot.chat.welcomeMessage": "always",
+    "github.copilot.chat.localeOverride": "en",
+    "github.copilot.chat.experimental.codeSearch.enabled": true,
+    "github.copilot.chat.experimental.terminalIntegration.enabled": true,
+    // Editor Settings
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    // Python Settings
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.terminal.activateEnvironment": true,
+    // File Associations
+    "files.associations": {
+        "*.md": "markdown"
+    },
+    // Files to Exclude from Search/Watch
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/pb_data/logs": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        "**/pb_data": true,
+        "**/.venv": true,
+        "**/server.log": true
+    },
+    // File Watcher Exclusions (Performance)
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/pb_data/**": true,
+        "**/__pycache__/**": true
+    },
+    // Markdown Settings
+    "markdown.preview.breaks": true,
+    "markdown.preview.linkify": true,
+    // Terminal Settings
+    "terminal.integrated.env.linux": {
+        "GEMINI_API_KEY": "AIzaSyBf0cGONzMrHzsGYY9Cm19g--B5PYrtWn8",
+        "POCKETBASE_URL": "http://127.0.0.1:8090"
+    },
+    // Git Settings
+    "git.ignoreLimitWarning": true,
+    // Recommended Extensions Alert
+    "extensions.ignoreRecommendations": false,
+    // MCP (Model Context Protocol) Settings
+    "mcp.servers": {
+        "filesystem": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+        },
+        "git": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-git", "${workspaceFolder}"]
+        }
+    },
+    "mcp.autoStartServers": ["filesystem", "git"]
+}

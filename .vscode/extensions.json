@@ -1,0 +1,32 @@
+{
+    "recommendations": [
+        // GitHub Copilot (Required)
+        "github.copilot",
+        "github.copilot-chat",
+        
+        // Python Development
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        
+        // Web Development
+        "ritwickdey.liveserver",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        
+        // Documentation
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "streetsidesoftware.code-spell-checker",
+        
+        // Database/API Tools
+        "cweijan.vscode-database-client2",
+        "humao.rest-client",
+        
+        // Git Tools
+        "eamodio.gitlens",
+        
+        // Task Management
+        "gruntfuggly.todo-tree"
+    ]
+}
